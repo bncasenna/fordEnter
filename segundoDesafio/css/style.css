@@ -65,6 +65,8 @@ main {
     text-align: center;
 }
 
+/* PAGINA: INDEX.HTML */
+
 .margin {
     margin: 10px 10%;
     border: 1px solid var(--white);
@@ -85,6 +87,22 @@ main {
     font-size: 1.1rem;
 }
 
+.parallax{
+    background: url("../img/rangerBlack.jpg")
+    no-repeat fixed center;
+    background-size: cover; 
+    width: 100%;
+    height: 1000px;
+}
+
+.parallaxInner {
+    padding-top: 30%;
+    padding-bottom: 35%;
+    height: 100%;
+}
+
+/* PAGINA: LANÇAMENTOS.HTML */
+
 .text {
     margin: 10px 10%;
     border: 1px solid var(--white);
@@ -103,39 +121,6 @@ main {
     text-align: center;
     width: 100%;           
     font-size: 1.1rem;
-}
-.marginLançamentos span{
-    display: block;
-    width: 100%;
-    height: 100px;
-}
-
-.lançamentos {
-    display: flex;
-    justify-content: space-between;
-    max-width: 62%;
-    margin: 0 auto;
-}
-
-.parallax{
-    background: url("../img/rangerBlack.jpg")
-    no-repeat fixed center;
-    background-size: cover; 
-    width: 100%;
-    height: 1000px;
-}
-
-.parallaxInner {
-    padding-top: 30%;
-    padding-bottom: 35%;
-    height: 100%;
-}
-
-.parallaxLançamentos {
-    position: relative;
-    width: 100%;
-    height: 1000px;
-    overflow: hidden;
 }
 
 .parallaxVideo {
@@ -156,6 +141,125 @@ main {
     min-width: 177.77vh;
     pointer-events: auto;
 }
+
+.parallaxLançamentos {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.lançamentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 5%;
+    width: 100%;
+}
+
+.checkbox1, .checkbox2, .checkbox3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.lançamentos img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: (255, 255, 255, 0.2);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: var(--blueFord);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.itemInfo label {
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.itemInfo label span {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.iconInfo {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 3px;
+    filter: brightness(0) invert(1);
+}
+
+.btnComparar {
+    display: block;
+    margin: 30px auto;
+    background-color: var(--btnBlue);
+    color: var(--white);
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnComparar:hover {
+    background-color:(255, 255, 255, 0.2);
+}
+
+.marginLançamentos span{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+/* PAGINA: CONTATO.HTML */
+
+/* PAGINA: CONTATO.HTML */
 
 .footer {
     color: var(--white);

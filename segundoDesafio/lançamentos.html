@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,77 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reset.css">
 </head>
+
 <body>
 
     <header class="header">
-            <img class="logoHeader" src="img/logoFord.png" alt="Logo oficial da Ford">
-        </div>
-
+        <img class="logoHeader" src="img/logoFord.png" alt="Logo oficial da Ford">
         <nav aria-label="navegação principal">
             <ul class="navList">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="lançamentos.html">Lançamentos</a></li>
-                <li><a href="contato.html">Contato</a></li> 
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-            <section class="parallaxLançamentos">
-                <div class="parallaxVideo">
-                <span><iframe
-                src="https://www.youtube.com/embed/vQsryuNmsL0?mute=1&autoplay=1&loop=1&playlist=vQsryuNmsL0" 
-                frameborder="0" 
-                allow="autoplay; encrypted-media" 
-                allowfullscreen>
-        </iframe></span>
-    </div>
-</section>
+        <section class="parallaxLançamentos">
+            <div class="parallaxVideo">
+                <span>
+                    <iframe src="https://www.youtube.com/embed/vQsryuNmsL0?mute=1&autoplay=1&loop=1&playlist=vQsryuNmsL0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </span>
+            </div>
+        </section>
 
         <div class="text">
-             <p>Confira os últimos lançamentos da Ford Brasil!</p>
+            <p>Confira os últimos lançamentos da Ford Brasil!</p>
         </div>
 
         <div class="lançamentos">
-            <img src="img/XL cabine.png" alt="Lançamento 1">
-            <img src="img/xls 2.2 diesel.png" alt="Lançamento 2">
-            <img src="img/Storm.png" alt="Lançamento 3">
+            <div class="checkbox1">
+                <img src="img/XL cabine.png" alt="Lançamento 1">
+                <div class="itemInfo">
+                    <input type="checkbox" id="xlCabine" name="version" value="xlCabine">
+                    <label for="xlCabine">
+                        XL Cabine Simples 2.2 Diesel 4x4 MT Flex Work<br>
+                        <span>Preço Sugerido: R$183.850</span>
+                    </label>
+                    <img src="img/info.png" alt="Ícone de informação" class="iconInfo">
+                </div>
+            </div>
+
+            <div class="checkbox2">
+                <img src="img/XLS.png" alt="Lançamento 2">
+                <div class="itemInfo">
+                    <input type="checkbox" id="xls" name="version" value="xls">
+                    <label for="xls">
+                        XLS 2.2 Diesel 4x4 AT 2022<br>
+                        <span>Preço Sugerido: R$220.690</span>
+                    </label>
+                    <img src="img/info.png" alt="Ícone de informação" class="iconInfo">
+                </div>
+            </div>
+
+            <div class="checkbox3">
+                <img src="img/Storm.png" alt="Lançamento 3">
+                <div class="itemInfo">
+                    <input type="checkbox" id="storm" name="version" value="storm">
+                    <label for="storm">
+                        Storm 3.2 Diesel 4x4 AT 2022<br>
+                        <span>Preço Sugerido: R$222.790</span>
+                    </label>
+                    <img src="img/info.png" alt="Ícone de informação" class="iconInfo">
+                </div>
+            </div>
         </div>
 
+        <button class="btnComparar">Comparar Carros</button>
+
         <div class="marginLançamentos">
-             <span></span>
+            <span></span>
         </div>
     </main>
 
@@ -71,7 +104,7 @@
                     </li>
                 </ul>
             </div>
-            
+
             <div class="copyrightSide">
                 <span>&copy; 2026 Ford. Todos os direitos reservados.</span>
             </div>
@@ -81,5 +114,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
