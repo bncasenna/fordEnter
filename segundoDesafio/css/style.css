@@ -1,0 +1,263 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blueFord: #1b357e;
+    --btnBlue: #1351d8;
+    --headerHeight: 80px; 
+    --footerHeight: 60px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: var(--blueFord);
+    color: var(--black);
+    overflow-x: hidden;
+    padding-top: var(--headerHeight);
+    padding-bottom: var(--footerHeight);
+}
+
+.header {
+    background-color: var(--white);
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--headerHeight);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    gap: 32%;
+}
+
+.logoHeader {
+    height:60px;
+    width: auto;
+    display: flex;
+}
+
+.navList {
+    display: flex;
+    gap: 60px; 
+    list-style: none;
+}
+
+.navList a {
+    text-decoration: none;
+    color: var(--btnBlue);
+    font-weight: 500;
+    font-size: 23px;
+    transition: color 0.3s ease;
+}
+
+.navList a:hover {
+    opacity: 0.3;
+}
+
+main {
+    width: 100%;
+    text-align: center;
+}
+
+.margin {
+    margin: 10px 10%;
+    border: 1px solid var(--white);
+    background-color: var(--blueFord);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.margin p {
+    margin: 0;
+    color: var(--white);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;           
+    font-size: 1.1rem;
+}
+
+.text {
+    margin: 10px 10%;
+    border: 1px solid var(--white);
+    background-color: var(--blueFord);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.text p {
+    margin: 0;
+    color: var(--white);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;           
+    font-size: 1.1rem;
+}
+.marginLançamentos span{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.lançamentos {
+    display: flex;
+    justify-content: space-between;
+    max-width: 62%;
+    margin: 0 auto;
+}
+
+.parallax{
+    background: url("../img/rangerBlack.jpg")
+    no-repeat fixed center;
+    background-size: cover; 
+    width: 100%;
+    height: 1000px;
+}
+
+.parallaxInner {
+    padding-top: 30%;
+    padding-bottom: 35%;
+    height: 100%;
+}
+
+.parallaxLançamentos {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.parallaxVideo {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+    background-color: var(--blueFord); 
+    padding: 500px;
+}
+
+.parallaxVideo iframe {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    height: 80.25vw;
+    min-height: 100%;
+    min-width: 177.77vh;
+    pointer-events: auto;
+}
+
+.footer {
+    color: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footerHeight);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+    
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.socialSide {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.social-links img {
+    height: 35px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.social-links a:hover img {
+    opacity: 0.3;
+}
+
+.copyrightSide {
+    flex: 2;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.footerLogo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footerLogo img {
+    width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --headerHeight: 100px; 
+    }
+
+    .menuToggle {
+        display: flex;
+    }
+
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 0;
+    }
+
+    .navList {
+        gap: 90px;
+        margin-top: 5px;
+        display: flex;
+    }
+
+    .footer {
+        height: auto;
+        padding: 15px 0;
+        position: relative; 
+    }
+
+    .footerContent {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footerLogo {
+        justify-content: center;
+    }
+
+    body {
+        padding-bottom: 0;
+    }
+    .menuToggle {
+        display: block;
+        cursor: pointer;
+    }
+}
