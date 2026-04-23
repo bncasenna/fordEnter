@@ -4,8 +4,10 @@
     --blueFord: #1b357e;
     --btnBlue: #1351d8;
     --ice: #cccccc;
+    --grey: #aaaaaa;
     --headerHeight: 80px; 
     --footerHeight: 60px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
 * {
@@ -15,7 +17,6 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background: var(--blueFord);
     color: var(--black);
     overflow-x: hidden;
@@ -119,7 +120,7 @@ main {
 .parallaxVideo {
     height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
     overflow: hidden; 
     background-color: var(--blueFord); 
     padding: 500px;
@@ -133,6 +134,12 @@ main {
     min-height: 100%;
     min-width: 177.77vh;
     pointer-events: auto;
+}
+.description p{
+
+    padding-top: 0.5%;
+    padding-bottom: 4%;
+    color: var(--grey);
 }
 
 .text {
@@ -172,6 +179,8 @@ main {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
+    padding-bottom: 2%;
+
 }
 
 .lançamentos img {
@@ -392,147 +401,6 @@ input[type="checkbox"]:checked::after {
 }
 
 /* ==========================================================================
-    RESPONSIVIDADE 
+    RESPONSIVIDADE
    ========================================================================== */
-/* ==========================================================================
-    RESPONSIVIDADE COMPLETA (FINAL)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-    :root {
-        --headerHeight: auto; 
-    }
 
-    /* 1. HEADER E MENU: Unifica a cor e organiza o espaço */
-    .header {
-        flex-direction: column;
-        height: auto;
-        padding: 15px 0;
-        gap: 15px;
-        position: fixed;
-    }
-
-    .logoHeader {
-        height: 45px;
-    }
-
-    .navList {
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .navList a {
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--btnBlue) !important; /* Força a cor azul em todas as páginas */
-    }
-
-    /* 2. CONTAINERS PRINCIPAIS (Index e Lançamentos) */
-    .parallax, .parallaxLançamentos {
-        display: flex !important;
-        flex-direction: column !important; /* Empilha vídeo/imagem no topo e texto embaixo */
-        height: auto !important;
-        min-height: auto !important;
-        padding: 0 !important;
-        background-attachment: scroll !important; /* Mobile não lida bem com fixed */
-    }
-
-    /* 3. IMAGEM (Página Index/Contato): Exibição 100% sem cortes */
-    .parallax {
-        background-size: contain !important;
-        background-position: center top;
-        aspect-ratio: 16 / 9;
-        margin-top: 100px; /* Evita ficar sob o header */
-    }
-
-    /* 4. VÍDEO (Página Lançamentos): Correção do esmagamento */
-    .parallaxVideo {
-        width: 100% !important;
-        height: 0 !important;
-        padding-bottom: 56.25% !important; /* Proporção 16:9 absoluta */
-        padding-top: 0 !important; /* Remove os 500px que esmagavam o vídeo */
-        position: relative !important;
-        overflow: hidden !important;
-        margin-top: 100px;
-    }
-
-    .parallaxVideo iframe {
-        position: absolute !important;
-        top: 0 !important;
-        left: 0 !important;
-        width: 100% !important;
-        height: 100% !important;
-        transform: none !important; /* Remove o translate(-50%, -50%) */
-        min-width: 0 !important; /* Remove restrições de vh/vw do desktop */
-        min-height: 0 !important;
-    }
-
-    /* 5. TEXTO E MARGENS: Garante que fiquem ABAIXO do vídeo/imagem */
-    .margin, .text {
-        margin: 20px 5% !important;
-        width: 90% !important;
-        padding: 30px 20px !important;
-        min-height: auto !important;
-        border: 1px solid var(--white);
-    }
-
-    /* 6. FORMULÁRIO (Página Contato) */
-    .parallaxInner:has(.contatoForm) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        height: auto;
-    }
-
-    .contatoForm {
-        width: 90%;
-        margin: 20px auto;
-        position: relative;
-    }
-
-    /* 7. CARDS DE CARROS (Lançamentos) */
-    .lançamentos {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 20px 5%;
-    }
-
-    .checkbox1, .checkbox2, .checkbox3 {
-        width: 100%;
-    }
-
-    /* 8. FOOTER: Ajuste para mobile */
-    .footer {
-        position: relative; 
-        height: auto;
-        padding: 30px 5%;
-        background-color: var(--blueFord);
-    }
-
-    .footerContent {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-
-    .socialSide {
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .copyrightSide {
-        font-size: 1rem;
-        order: 3;
-    }
-
-    .footerLogo {
-        justify-content: center;
-    }
-
-    body {
-        padding-bottom: 0;
-    }
-}
