@@ -1,0 +1,325 @@
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --blueFord: #1b357e;
+    --btnBlue: #1351d8;
+    --ice: #cccccc;
+    --grey: #aaaaaa;
+    --headerHeight: 80px; 
+    --footerHeight: 60px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--blueFord);
+    color: var(--black);
+    overflow-x: hidden;
+    padding-top: var(--headerHeight);
+    padding-bottom: var(--footerHeight);
+}
+
+main {
+    width: 100%;
+    text-align: center;
+}
+
+.header {
+    background-color: var(--white);
+    padding: 0 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--headerHeight);
+    display: flex;
+    align-items: center;
+    gap: 32%;
+}
+
+.logoHeader {
+    height:60px;
+    position: relative;
+}
+
+.navList {
+    width: 100%;
+    display: flex;
+    gap: 60px; 
+    list-style: none;
+    justify-content: center;
+}
+
+.navList a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--btnBlue);
+    font-weight: 500;
+    font-size: 23px;
+    transition: color 0.3s ease;
+}
+
+.navList a:hover {
+    opacity: 0.3;
+}
+
+.videoFord {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+}
+
+.video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden; 
+    background-color: var(--blueFord); 
+    padding: 500px;
+}
+
+.video iframe {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 100vw; 
+    height: 80.25vw;
+    min-height: 100%;
+    min-width: 177.77vh;
+    pointer-events: auto;
+}
+.description p{
+
+    padding-top: 0.5%;
+    padding-bottom: 4%;
+    color: var(--grey);
+}
+
+.text {
+    margin: 10px 10%;
+    border: 1px solid var(--white);
+    background-color: var(--blueFord);
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.text p {
+    margin: 0;
+    color: var(--white);
+    letter-spacing: 3px;
+    text-align: center;
+    width: 100%;           
+    font-size: 1.1rem;
+}
+
+.lançamentos {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px 5%;
+    width: 100%;
+}
+
+.checkbox1, .checkbox2, .checkbox3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding-bottom: 2%;
+}
+
+.lançamentos img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.itemInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--white);
+    cursor: pointer;
+    flex-shrink: 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: (255, 255, 255, 0.2);
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: var(--blueFord);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.itemInfo label {
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: left;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.itemInfo label span {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.iconInfo {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-top: 3px;
+    filter: brightness(0) invert(1);
+}
+
+.btnComparar {
+    display: block;
+    margin: 30px auto;
+    background-color: var(--btnBlue);
+    color: var(--white);
+    padding: 12px 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btnComparar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.marginLançamentos span{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.footer {
+    color: var(--white);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--footerHeight);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+    
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.socialSide {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex: 1;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.socialLinks img {
+    height: 35px;
+    width: auto;
+    transition: 0.3s;
+}
+
+.socialLinks a:hover img {
+    opacity: 0.3;
+}
+
+.copyright {
+    flex: 2;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.footerLogo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footerLogo img {
+    width: auto;
+}
+
+/* ==========================================================================
+    RESPONSIVIDADE
+   ========================================================================== */
+  @media screen and (max-width: 768px) {
+    :root {
+        --headerHeight: 100px; 
+    }
+    .header {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+        gap: 15px;
+        position: fixed;
+    }
+
+    .logoHeader {
+        position: relative;
+    }
+
+    .navList {
+          gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+     .navList a {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--btnBlue); 
+    }
+}        
