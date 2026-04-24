@@ -98,6 +98,10 @@ main {
     width: 100%;
 }
 
+.parallax span img:hover {
+    transform: scale(1.05);
+}
+
 .margin {
     margin: 10px 10%;
     border: 1px solid var(--white);
