@@ -1,10 +1,11 @@
 :root {
     --black: #000000;
-    --white: #ffffff;
+    --darkBlue: #1e2e5d;
     --blueFord: #1b357e;
     --btnBlue: #1351d8;
     --ice: #cccccc;
     --grey: #aaaaaa;
+    --white: #ffffff;
     --headerHeight: 80px; 
     --footerHeight: 60px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -19,8 +20,7 @@
 body {
     background: var(--blueFord);
     color: var(--black);
-    overflow-x: hidden;
-    padding-top: var(--headerHeight);
+    overflow-x: hidden;--white: #ffffff;
     padding-bottom: var(--footerHeight);
 }
 
@@ -29,10 +29,14 @@ main {
     text-align: center;
 }
 
+/* ==========================================================================
+    HEADER 
+   ========================================================================== */
+
 .header {
     background-color: var(--white);
-    padding: 0 5%;
-    position: fixed;
+    padding: 0 2%;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -40,19 +44,21 @@ main {
     display: flex;
     align-items: center;
     gap: 32%;
+    z-index: 10;
 }
 
 .logoHeader {
-    height:60px;
+    height: 60px;
     position: relative;
 }
 
 .navList {
-    width: 100%;
+    width: 30%;
     display: flex;
-    gap: 60px; 
+    gap: 60px;
     list-style: none;
     justify-content: center;
+    align-items: center;
 }
 
 .navList a {
@@ -65,14 +71,23 @@ main {
     transition: color 0.3s ease;
 }
 
+.navList a.active {
+    font-size: 25px;
+    font-weight: 550;
+    opacity: 1;
+    color: var(--darkBlue);
+}
+
 .navList a:hover {
     opacity: 0.3;
 }
-
+/* ==========================================================================
+    PAGINA: LANÇAMENTOS.HTML
+   ========================================================================== */
 .videoFord {
     position: relative;
     width: 100%;
-    height: 1000px;
+    height: 1050px;
     overflow: hidden;
 }
 
@@ -82,7 +97,7 @@ main {
     position: absolute;
     overflow: hidden; 
     background-color: var(--blueFord); 
-    padding: 500px;
+    padding: 520px 10px;
 }
 
 .video iframe {
@@ -90,15 +105,38 @@ main {
     transform: translate(-50%, -50%);
     width: 100vw; 
     height: 80.25vw;
-    min-height: 100%;
+    min-height: 10%;
     min-width: 177.77vh;
     pointer-events: auto;
+    z-index: 20;
 }
-.description p{
 
-    padding-top: 0.5%;
-    padding-bottom: 4%;
+.description {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 15px 0;
+}
+
+.description p {
+    display: inline-block;
+    padding-left: 100%;
     color: var(--grey);
+    font-size: 1.1rem;
+    animation: marqueeFord 40s linear infinite;
+}
+
+@keyframes marqueeFord {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0); 
+    }
+}
+
+.description:hover p {
+    animation-play-state: paused;
 }
 
 .text {
@@ -124,21 +162,36 @@ main {
 .lançamentos {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 20px;
     padding: 40px 5%;
     width: 100%;
 }
 
-.checkbox1, .checkbox2, .checkbox3 {
+.checkbox1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
+    width: 30%;
+    min-width: 250px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    padding-bottom: 2%;
+    padding: 2%;
+}
+
+.checkbox2, .checkbox3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    width: 30%;
+    min-width: 250px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 2%;
 }
 
 .lançamentos img {
@@ -228,9 +281,12 @@ input[type="checkbox"]:checked::after {
 .marginLançamentos span{
     display: block;
     width: 100%;
-    height: 100px;
+    height: 10px;
 }
 
+/* ==========================================================================
+    FOOTER 
+   ========================================================================== */
 .footer {
     color: var(--white);
     position: fixed;
@@ -239,23 +295,26 @@ input[type="checkbox"]:checked::after {
     width: 100%;
     height: var(--footerHeight);
     display: flex;
+    justify-content: center;
     align-items: center;
     z-index: 1000;
 }
     
 .footerContent {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 5%;
 }
 
 .socialSide {
+    position: absolute;
+    left: 2%;
     display: flex;
     align-items: center;
-    gap: 30px;
-    flex: 1;
+    gap: 20px;
 }
 
 .socialLinks {
@@ -275,16 +334,15 @@ input[type="checkbox"]:checked::after {
 }
 
 .copyright {
-    flex: 2;
+    flex: 5;
     text-align: center;
     font-size: 1.25rem;
+
 }
 
 .footerLogo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    right: 2%;
 }
 
 .footerLogo img {
@@ -292,34 +350,123 @@ input[type="checkbox"]:checked::after {
 }
 
 /* ==========================================================================
-    RESPONSIVIDADE
+    RESPONSIVIDADE 
    ========================================================================== */
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     :root {
-        --headerHeight: 100px; 
+        --headerHeight: 120px;
+        --footerHeight: auto;
     }
+    
+    .body{
+        padding-top: var(--headerHeight);
+        padding-bottom: 0;
+    }
+
     .header {
+        display: flex;
         flex-direction: column;
         width: 100%;
-        height: auto;
-        padding: 15px 0;
-        gap: 15px;
+        height: var(--headerHeight);
+        gap: 10px;
+        padding: 30px 0;
         position: fixed;
+        z-index: 1000;
     }
 
     .logoHeader {
         position: relative;
+        height: 50px;
+        display: block;
     }
 
     .navList {
-          gap: 20px;
+        width: 100%;
+        height: auto;
+        gap: 20px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-     .navList a {
-        font-size: 18px;
-        font-weight: 500;
-        color: var(--btnBlue); 
+    .navList a {
+        font-size: 20px;
     }
-}        
+
+    .videoFord {
+        margin: 121px 0;
+        margin-bottom: 5px;
+        position: relative;
+        height: auto;      
+        overflow: visible;
+    }
+
+    .video {
+        position: relative;
+        padding: 0;        
+        height: auto;
+        width: 100%;
+        aspect-ratio: 16 / 9; 
+    }
+
+    .video iframe {
+        position: relative;
+        transform: none;   
+        top: 0;
+        left: 0;
+        width: 100%;       
+        height: 100%;      
+        min-height: unset; 
+        min-width: unset;  
+    }
+
+    .lançamentos {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .checkbox1, .checkbox2, .checkbox3 {
+        width: 90%;
+    }
+
+    .marginLançamentos span{
+        display: none;
+    }
+
+    /* 5. Footer: Organização Vertical (Evita quebra de layout) */
+    .footer {
+        position: relative; /* Para de flutuar e fica no fim da página */
+        height: auto;
+        padding: 30px 0;
+        background-color: var(--darkBlue);
+    }
+
+    .footerContent {
+        flex-direction: column; /* Empilha os itens */
+        gap: 25px;
+        text-align: center;
+    }
+
+    .socialSide {
+        position: static; /* Remove o absoluto do desktop */
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .copyright {
+        order: 2; /* Texto no centro */
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .footerLogo {
+        position: static; /* Remove o absoluto */
+        justify-content: center;
+        order: 3;
+    }
+
+    .footerLogo img {
+        height: 40px;
+    }
+}

@@ -1,10 +1,11 @@
 :root {
     --black: #000000;
-    --white: #ffffff;
+    --darkBlue: #1e2e5d;
     --blueFord: #1b357e;
     --btnBlue: #1351d8;
     --ice: #cccccc;
     --grey: #aaaaaa;
+    --white: #ffffff;
     --headerHeight: 80px; 
     --footerHeight: 60px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -30,11 +31,11 @@ main {
 }
 
 /* ==========================================================================
-    HEADER E NAVEGAÇÃO 
+    HEADER 
    ========================================================================== */
 .header {
     background-color: var(--white);
-    padding: 0 5%;
+    padding: 0 2%;
     position: fixed;
     top: 0;
     left: 0;
@@ -43,21 +44,27 @@ main {
     display: flex;
     align-items: center;
     gap: 32%;
+    z-index: 1000;
 }
 
 .logoHeader {
-    height:60px;
-    width: auto;
-    display: flex;
+    height: 60px;
+    position: fixed;
 }
 
 .navList {
+    width: 300%;
+    height: 200%;
     display: flex;
-    gap: 60px; 
+    gap: 60px;
     list-style: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .navList a {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: var(--btnBlue);
     font-weight: 500;
@@ -65,9 +72,16 @@ main {
     transition: color 0.3s ease;
 }
 
+.navList a.active {
+    font-size: 25px;
+    font-weight: 550;
+    opacity: 1;
+}
+
 .navList a:hover {
     opacity: 0.3;
 }
+
 
 /* ==========================================================================
     PÁGINA: INDEX.HTML 
@@ -77,13 +91,13 @@ main {
     no-repeat fixed center;
     background-size: cover; 
     width: 100%;
-    height: 1000px;
+    height: auto;
 }
 
 .parallaxInner {
-    padding-top: 30%;
-    padding-bottom: 35%;
+    padding-top: 32%;
     height: 100%;
+
 }
 
 .parallax span {
@@ -92,6 +106,7 @@ main {
     align-items: center;
     padding:100px 100px;
     margin-top: -500px;
+
 }
 
 .parallax span img{
@@ -106,7 +121,6 @@ main {
     margin: 10px 10%;
     border: 1px solid var(--white);
     background-color: var(--blueFord);
-    padding: 50px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,19 +137,14 @@ main {
 }
 
 /* ==========================================================================
-    PÁGINA: LANÇAMENTOS.HTML 
-   ========================================================================== */
-
-/* ==========================================================================
     PÁGINA: CONTATO.HTML 
    ========================================================================== */
 .parallaxInner:has(.contatoForm) {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
-    height: 80%;
-
+    padding: 1%;
+    padding-bottom: 5%;
 }
 .contatoForm {
     background-color: rgba(255, 255, 255, 0.2);
@@ -201,23 +210,26 @@ main {
     width: 100%;
     height: var(--footerHeight);
     display: flex;
+    justify-content: center;
     align-items: center;
     z-index: 1000;
 }
     
 .footerContent {
     display: flex;
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 0 5%;
 }
 
 .socialSide {
+    position: absolute;
+    left: 2%;
     display: flex;
     align-items: center;
-    gap: 30px;
-    flex: 1;
+    gap: 20px;
 }
 
 .socialLinks {
@@ -237,16 +249,15 @@ main {
 }
 
 .copyright {
-    flex: 2;
+    flex: 5;
     text-align: center;
     font-size: 1.25rem;
+
 }
 
 .footerLogo {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    position: absolute;
+    right: 2%;
 }
 
 .footerLogo img {
@@ -254,6 +265,126 @@ main {
 }
 
 /* ==========================================================================
-    RESPONSIVIDADE
+    RESPONSIVIDADE:
    ========================================================================== */
+@media screen and (max-width: 768px) {
+    
+    body {
+        padding-top: 105px; 
+        padding-bottom: 0;
+        background: var(--blueFord);
+        display: flex;
+        flex-direction: column;
+    }
 
+    main {
+        width: 100%;
+        text-align: center;
+        height: auto;
+    }
+
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .logoHeader {
+        position: relative;
+        height: 45px;
+        margin: 0 auto;
+    }
+
+    .navList {
+        width: 100%;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .parallax {
+        background: var(--blueFord);
+        height: auto;
+        width: 100%;
+    }
+
+    .parallaxInner {
+        padding: 0; 
+        height: auto;
+    }
+
+    .parallax span {
+        margin-top: 0;
+        padding: 0; 
+        display: block;
+    }
+
+    .parallax span img {
+        width: 100%;
+        height: auto;
+        display: block; 
+    }
+
+    .margin {
+        margin: 40px 10%;
+        padding: 25px;    
+        width: auto;
+        display: block;
+    }
+
+    .margin p {
+        font-size: 1.1rem;
+        line-height: 1.5; 
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    .parallaxInner:has(.contatoForm) {
+        padding: 40px 0;
+        background: var(--blueFord);
+        height: auto;
+    }
+
+    .contatoForm {
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: 0 auto;
+    }
+
+    .footer {
+        position: relative;
+        height: auto;
+        padding: 30px 0;
+        background-color: #162a61; 
+        margin-top: auto;
+    }
+
+    .footerContent {
+        flex-direction: column; 
+        gap: 25px;
+        text-align: center;
+    }
+
+    .socialSide {
+        position: static; 
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .copyright {
+        order: 2; 
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .footerLogo {
+        position: static; 
+        justify-content: center;
+        order: 3;
+    }
+
+    .footerLogo img {
+        height: 40px;
+    }
+}
