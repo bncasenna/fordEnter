@@ -21,7 +21,7 @@ body {
     background: var(--blueFord);
     color: var(--black);
     overflow-x: hidden;
-    padding-top: var(--headerHeight);
+    padding-top: auto;
     padding-bottom: var(--footerHeight);
 }
 
@@ -33,10 +33,11 @@ main {
 /* ==========================================================================
     HEADER 
    ========================================================================== */
+
 .header {
     background-color: var(--white);
     padding: 0 2%;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -44,7 +45,7 @@ main {
     display: flex;
     align-items: center;
     gap: 32%;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .logoHeader {
@@ -53,8 +54,7 @@ main {
 }
 
 .navList {
-    width: 300%;
-    height: 200%;
+    width: 430%;
     display: flex;
     gap: 60px;
     list-style: none;
@@ -76,13 +76,12 @@ main {
     font-size: 25px;
     font-weight: 550;
     opacity: 1;
+    color: var(--darkBlue);
 }
 
 .navList a:hover {
     opacity: 0.3;
 }
-
-
 /* ==========================================================================
     PÁGINA: INDEX.HTML 
    ========================================================================== */
@@ -91,30 +90,29 @@ main {
     no-repeat fixed center;
     background-size: cover; 
     width: 100%;
-    height: auto;
 }
 
 .parallaxInner {
-    padding-top: 32%;
-    height: 100%;
-
+    padding-top: 29%;
 }
 
 .parallax span {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:100px 100px;
+    padding: 100px 100px;
     margin-top: -500px;
-
 }
 
 .parallax span img{
-    width: 100%;
+    width: 1400px;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .parallax span img:hover {
-    transform: scale(1.05);
+    transform: scale(1.15);
 }
 
 .margin {
@@ -145,10 +143,12 @@ main {
     align-items: center;
     padding: 1%;
     padding-bottom: 5%;
+    padding-top: 5%;
 }
 .contatoForm {
     background-color: rgba(255, 255, 255, 0.2);
     padding: 30px;
+    border: 1px solid var(--grey);
     border-radius: 10px;
     width: 90%;
     max-width: 450px;
@@ -230,6 +230,7 @@ main {
     display: flex;
     align-items: center;
     gap: 20px;
+    color: var(--ice);
 }
 
 .socialLinks {

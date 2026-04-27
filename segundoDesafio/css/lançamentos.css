@@ -20,7 +20,7 @@
 body {
     background: var(--blueFord);
     color: var(--black);
-    overflow-x: hidden;--white: #ffffff;
+    overflow-x: hidden;
     padding-bottom: var(--footerHeight);
 }
 
@@ -49,11 +49,11 @@ main {
 
 .logoHeader {
     height: 60px;
-    position: relative;
+    position: fixed;
 }
 
 .navList {
-    width: 30%;
+    width: 430%;
     display: flex;
     gap: 60px;
     list-style: none;
@@ -315,6 +315,7 @@ input[type="checkbox"]:checked::after {
     display: flex;
     align-items: center;
     gap: 20px;
+        color: var(--ice);
 }
 
 .socialLinks {
