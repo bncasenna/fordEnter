@@ -390,6 +390,131 @@ input[type="checkbox"]:checked::after {
     transform: scale(1.02);
 }
 
+/* ============================================================================
+     DETALHES DO CARRO (CARINFO MODAL)
+   ========================================================================== */
+#car-info-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); 
+    backdrop-filter: blur(4px);
+    z-index: 2000; 
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#car-info-modal:not(.modal-hidden) {
+    display: flex !important;
+}
+
+.modal-hidden {
+    display: none !important;
+}
+
+.modal-content {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto; 
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    animation: zoomInModal 0.3s ease-out; 
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--darkBlue);
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: var(--darkBlue);
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.btn-modal-close {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    color: var(--grey);
+    transition: color 0.2s;
+}
+
+.btn-modal-close:hover {
+    color: var(--black);
+}
+
+.modal-img {
+    max-width: 80%;
+    height: auto;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 0 auto 20px auto;
+    display: block;
+}
+
+.modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.modal-table td {
+    padding: 10px 15px;
+    font-size: 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-table td:first-child {
+    font-weight: 500;
+    color: #555555;
+    text-align: left;
+    width: 50%;
+}
+
+.modal-table td:last-child {
+    color: var(--black);
+    text-align: right;
+    width: 50%;
+}
+
+.modal-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.btn-modal-action {
+    background-color: var(--btnBlue);
+    color: var(--white);
+    padding: 12px 60px;
+    border: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-modal-action:hover {
+    background-color: var(--darkBlue);
+    transform: scale(1.02);
+}
+
 /* ==========================================================================
     FOOTER 
    ========================================================================== */
@@ -547,35 +672,43 @@ input[type="checkbox"]:checked::after {
         font-size: 13px;
         padding: 8px 6px;
     }
-    /* 5. Footer: Organização Vertical (Evita quebra de layout) */
+
+    .modal-content {
+        padding: 20px;
+        width: 95%;
+    }
+    .modal-table td {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
     .footer {
-        position: relative; /* Para de flutuar e fica no fim da página */
+        position: relative;
         height: auto;
         padding: 30px 0;
         background-color: var(--darkBlue);
     }
 
     .footerContent {
-        flex-direction: column; /* Empilha os itens */
+        flex-direction: column;
         gap: 25px;
         text-align: center;
     }
 
     .socialSide {
-        position: static; /* Remove o absoluto do desktop */
+        position: static;
         flex-direction: column;
         gap: 15px;
         width: 100%;
     }
 
     .copyright {
-        order: 2; /* Texto no centro */
+        order: 2;
         font-size: 1rem;
         padding: 0 10px;
     }
 
     .footerLogo {
-        position: static; /* Remove o absoluto */
+        position: static;
         justify-content: center;
         order: 3;
     }

@@ -30,12 +30,16 @@
     <main>
         <section class="videoFord">
             <div class="video">
-                    <iframe src="https://www.youtube.com/embed/vQsryuNmsL0?mute=1&autoplay=1&loop=1&playlist=vQsryuNmsL0"
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-                    </iframe>
+                <iframe src="https://www.youtube.com/embed/vQsryuNmsL0?mute=1&autoplay=1&loop=1&playlist=vQsryuNmsL0"
+                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+                </iframe>
             </div>
-     </section>
-        <div class="description"> <p> A experiência é o que nos faz mais fortes!!! Tecnologia, potência e inovação em cada detalhe. Conheça a experiência Ford e descubra como dirigir pode ir muito além do caminho.</p></div>
+        </section>
+        
+        <div class="description"> 
+            <p> A experiência é o que nos faz mais fortes!!! Tecnologia, potência e inovação em cada detalhe. Conheça a experiência Ford e descubra como dirigir pode ir muito além do caminho.</p>
+        </div>
+        
         <div class="text">
             <p>Confira os últimos lançamentos da Ford Brasil!</p>
         </div>
@@ -49,7 +53,7 @@
                         XL Cabine Simples 2.2 Diesel 4x4 MT Flex Work<br>
                         <span>Preço Sugerido: R$183.850</span>
                     </label>
-                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo">
+                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo" onclick="CarInfo(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16'));">
                 </div>
             </div>
 
@@ -61,7 +65,7 @@
                         XLS 2.2 Diesel 4x4 AT 2022<br>
                         <span>Preço Sugerido: R$220.690</span>
                     </label>
-                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo">
+                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo" onclick="CarInfo(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16'));">
                 </div>
             </div>
 
@@ -73,7 +77,7 @@
                         Storm 3.2 Diesel 4x4 AT 2022<br>
                         <span>Preço Sugerido: R$222.790</span>
                     </label>
-                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo">
+                    <img src="./img/info.png" alt="Ícone de informação" class="iconInfo" onclick="CarInfo(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17'));">
                 </div>
             </div>
         </div>
@@ -86,69 +90,71 @@
 
         <div id="compare">
             <div class="compareContainer">
-            
                 <table class="compareTable">
-                <tr>
-                    <td></td> <td id="compare_image_0"></td>
-                    <td id="compare_image_1"></td>
-                </tr>
-                <tr>
-                    <td>Modelo</td>
-                    <td id="compare_modelo_0"></td>
-                    <td id="compare_modelo_1"></td>
-                </tr>
-                <tr>
-                    <td>Altura da caçamba</td>
-                    <td id="compare_alturacacamba_0"></td>
-                    <td id="compare_alturacacamba_1"></td>
-                </tr>
-                <tr>
-                    <td>Altura do veículo</td>
-                    <td id="compare_alturaveiculo_0"></td>
-                    <td id="compare_alturaveiculo_1"></td>
-                </tr>
-                <tr>
-                    <td>Altura livre do solo</td>
-                    <td id="compare_alturasolo_0"></td>
-                    <td id="compare_alturasolo_1"></td>
-                </tr>
-                <tr>
-                    <td>Capacidade de carga</td>
-                    <td id="compare_capacidadecarga_0"></td>
-                    <td id="compare_capacidadecarga_1"></td>
-                </tr>
-                <tr>
-                    <td>Motor</td>
-                    <td id="compare_motor_0"></td>
-                    <td id="compare_motor_1"></td>
-                </tr>
-                <tr>
-                    <td>Potência</td>
-                    <td id="compare_potencia_0"></td>
-                    <td id="compare_potencia_1"></td>
-                </tr>
-                <tr>
-                    <td>Volume de caçamba</td>
-                    <td id="compare_volumecacamba_0"></td>
-                    <td id="compare_volumecacamba_1"></td>
-                </tr>
-                <tr>
-                    <td>Roda</td>
-                    <td id="compare_roda_0"></td>
-                    <td id="compare_roda_1"></td>
-                </tr>
-                <tr>
-                    <td><strong>Preço</strong></td>
-                    <td id="compare_preco_0" style="font-weight: bold;"></td>
-                    <td id="compare_preco_1" style="font-weight: bold;"></td>
-                </tr>
-            </table>
+                    <tr>
+                        <td></td> <td id="compare_image_0"></td>
+                        <td id="compare_image_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Modelo</td>
+                        <td id="compare_modelo_0"></td>
+                        <td id="compare_modelo_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Altura da caçamba</td>
+                        <td id="compare_alturacacamba_0"></td>
+                        <td id="compare_alturacacamba_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Altura do veículo</td>
+                        <td id="compare_alturaveiculo_0"></td>
+                        <td id="compare_alturaveiculo_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Altura livre do solo</td>
+                        <td id="compare_alturasolo_0"></td>
+                        <td id="compare_alturasolo_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Capacidade de carga</td>
+                        <td id="compare_capacidadecarga_0"></td>
+                        <td id="compare_capacidadecarga_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Motor</td>
+                        <td id="compare_motor_0"></td>
+                        <td id="compare_motor_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Potência</td>
+                        <td id="compare_potencia_0"></td>
+                        <td id="compare_potencia_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Volume de caçamba</td>
+                        <td id="compare_volumecacamba_0"></td>
+                        <td id="compare_volumecacamba_1"></td>
+                    </tr>
+                    <tr>
+                        <td>Roda</td>
+                        <td id="compare_roda_0"></td>
+                        <td id="compare_roda_1"></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Preço</strong></td>
+                        <td id="compare_preco_0" style="font-weight: bold;"></td>
+                        <td id="compare_preco_1" style="font-weight: bold;"></td>
+                    </tr>
+                </table>
 
-            <div class="btnContainer">
-                <button class="btnFechar" onclick="HideCompare()">Fechar</button>
+                <div class="btnContainer">
+                    <button class="btnFechar" onclick="HideCompare()">Fechar</button>
+                </div>
             </div>
-
         </div>
+
+        <div id="car-info-modal" class="modal-hidden"></div>
+
     </main>
 
     <footer class="footer">

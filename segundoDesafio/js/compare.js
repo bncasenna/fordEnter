@@ -1,7 +1,7 @@
-
-//car
+// Array que armazena os carros selecionados para comparação
 let carArr = [];
 
+// Classe que define a estrutura de um Carro
 class Car {
     constructor(nome, preco, alturaCacamba, alturaVeiculo, alturaSolo, capacidadeCarga, motor, potencia, volumeCacamba, roda, image){
         this.nome = nome;
@@ -18,13 +18,52 @@ class Car {
     }
 } 
 
-// search on array if exist carClass returning 1 if not return -1
+// Procura no array se o carro já existe. Retorna o índice se existir, ou -1 se não existir.
 function GetCarArrPosition(arr, carClass) {
     for(let i = 0; i < arr.length; i++){
-        if(arr[i].nome  === carClass.nome)
+        if(arr[i].nome === carClass.nome)
             return i;
     }
     return -1;
+}
+
+function CarInfo(el, carClass) {
+    if (carClass instanceof Car) {
+        const modalContainer = document.getElementById("car-info-modal");
+
+        modalContainer.innerHTML = `
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>${carClass.nome}</h3>
+                    <button class="btn-modal-close" onclick="CloseCarInfo()">&times;</button>
+                </div>
+                
+                <table class="modal-table">
+                    <tr><td><strong>Preço:</strong></td><td>${carClass.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td></tr>
+                    <tr><td><strong>Motor:</strong></td><td>${carClass.motor}</td></tr>
+                    <tr><td><strong>Potência:</strong></td><td>${carClass.potencia} cv</td></tr>
+                    <tr><td><strong>Altura Caçamba:</strong></td><td>${carClass.alturaCacamba} mm</td></tr>
+                    <tr><td><strong>Altura Veículo:</strong></td><td>${carClass.alturaVeiculo} mm</td></tr>
+                    <tr><td><strong>Altura Solo:</strong></td><td>${carClass.alturaSolo} mm</td></tr>
+                    <tr><td><strong>Capacidade Carga:</strong></td><td>${carClass.capacidadeCarga} Kg</td></tr>
+                    <tr><td><strong>Volume Caçamba:</strong></td><td>${carClass.volumeCacamba} L</td></tr>
+                    <tr><td><strong>Roda:</strong></td><td>${carClass.roda}</td></tr>
+                </table>
+                
+                <button class="btn-modal-action" onclick="CloseCarInfo()">Fechar Detalhes</button>
+            </div>
+        `;
+
+        modalContainer.classList.remove("modal-hidden");
+    } else {
+        throw "Objeto fornecido não é uma instância válida da classe Car.";
+    }
+}
+
+function CloseCarInfo() {
+    const modalContainer = document.getElementById("car-info-modal");
+    modalContainer.classList.add("modal-hidden");
+    modalContainer.innerHTML = ""; 
 }
 
 function SetCarToCompare(el, carClass) {
@@ -36,7 +75,6 @@ function SetCarToCompare(el, carClass) {
                 return;
             }
             
-    
             if(GetCarArrPosition(carArr, carClass) === -1){
                 carArr.push(carClass);
             } 
