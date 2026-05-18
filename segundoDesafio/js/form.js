@@ -16,7 +16,6 @@ function Post(form) {
         form.elements.namedItem("tipoContato").value,
         form.elements.namedItem("mensagem").value);
     
-    console.log("%c[FORMULÁRIO ENVIADO] Novo objeto Contato criado:", "color: #1351d8; font-weight: bold; font-size: 13px;");
     console.log("Aí ó Marcelo:", data);
     console.log("------------------------------------------------");
     console.log(`-> Nome do usuário: ${data.nome}`);
