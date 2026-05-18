@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio</title>
+</head>
+<body>
+<script>
+
+function write(text) {
+    document.write(text);
+}
+
+function breakLine() {
+    document.write("<br>");
+}
+
+function getNumber(message) {
+    let value;
+    do {
+        value = parseFloat(prompt(message));
+        if (isNaN(value)|| value <=0) {
+            alert("Digite um número válido maior que zero!");
+        }
+    } while (isNaN(value));
+    return value;
+}
+
+let distance = getNumber("Insira a distância da sua casa até o trabalho (km):");
+let consumo = getNumber("Insira o consumo do carro (km por litro):");
+let litros = distance / consumo;
+write(`Você vai gastar ${litros.toFixed(2)} litros para ir ao trabalho`); breakLine();
+let postos = parseInt(getNumber("Quantos postos você pesquisou?"));
+let soma = 0.0;
+let less = 9999;
+let i = 1;
+
+do {
+    let price = getNumber(`Digite o preço do posto ${i}:`);
+
+    soma += price;
+
+    if (price < less) {
+        less = price;
+    }
+    i++;
+} while (i <= postos);
+
+let media = soma / postos;
+let spent = 2 * litros * less;
+write(`Menor preço: R$ ${less.toFixed(2)}`); breakLine();
+write(`Média dos preços: R$ ${media.toFixed(2)}`); breakLine();
+write(`Gasto por dia: R$ ${spent.toFixed(2)}`);
+
+</script>
+</body>
+</html>
