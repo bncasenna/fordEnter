@@ -7,7 +7,6 @@
     --grey: #aaaaaa;
     --white: #ffffff;
     --headerHeight: 80px; 
-    --footerHeight: 5px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
@@ -22,13 +21,12 @@ body {
     color: var(--black);
     overflow-x: hidden;
     padding-top: auto;
-    padding-bottom: var(--footerHeight);
 }
 
 main {
     width: 100%;
     text-align: center;
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 
 /* ==========================================================================
@@ -116,8 +114,8 @@ main {
     justify-content: center;
     align-items: center;
     padding: 1%;
-    padding-bottom: 8.3%;
-    padding-top: 5%;
+    padding-bottom: 2%;
+    padding-top: 2%;
 }
 .contatoForm {
     background-color: rgba(255, 255, 255, 0.2);
@@ -154,6 +152,24 @@ main {
     color: var(--black);
 }
 
+.lgpd {
+    margin-bottom: 5%;
+    text-align: left;
+    border-radius: 4px;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.lgpd p{
+    text-align: justify;
+}
+
+.link{
+    color: var(--ice);
+    text-decoration: none;
+
+}
+
 .btnContato {
     background-color: var(--btnBlue);
     color: var(--white);
@@ -172,6 +188,7 @@ main {
     background-color: var(--blueFord); 
     transform: scale(1.05); 
 }
+
 
 /* ==========================================================================
     FOOTER 
