@@ -32,17 +32,15 @@ function Enviar(event) {
     event.preventDefault();
 
     const form = event.target;
-    
+    const termosCheckbox = document.getElementById("termos");
     const nomeInput = document.getElementById("nome");
     const nomeValue = nomeInput ? nomeInput.value.trim() : "";
 
     if (nomeValue !== "") {
         Post(form);
 
-        alert('Obrigado sr(a) ' + nomeValue + ' os seus dados foram encaminhados com sucesso');
+        alert('Obrigado sr(a) ' + nomeValue + ', os seus dados foram encaminhados com sucesso.');
         
         form.reset();
-    } else {
-        alert("Por favor, preencha o campo Nome.");
     }
 }
