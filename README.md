@@ -13,7 +13,7 @@ Cada pasta contém a solução de um desafio solicitado por cada sprint do proje
 
 ## 🛠️ Tecnologias Utilizadas
 Neste programa, estou utilizando:
-* **Linguagens:** HTML, CSS, JavaScript
+* **Linguagens:** HTML, CSS, JavaScript, Angular, TypeScript
 * **Ferramentas:** Git, GitHub, VS Code
 
 ---
