@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="home-wrapper">
+  
+  <header class="home-header">
+    <div class="header-logo">
+      <img src="assets/ford.png" alt="Ford Logo">
+      <h1>Painel Ford</h1>
+    </div>
+    <button (click)="efetuarLogout()" class="btn-logout">Sair</button>
+  </header>
+
+  <main class="home-main">
+    <div class="welcome-card">
+      <h2>Olá, Administrador!</h2>
+      <p>
+        Seja bem-vindo ao sistema de gestão estratégica da FORD. Monitore e gerencie os dados da frota de veículos conectados de forma ágil.
+      </p>
+      <a routerLink="/dashboard" class="btn-dashboard">Acessar Dashboard</a>
+    </div>
+  </main>
+
+</div>

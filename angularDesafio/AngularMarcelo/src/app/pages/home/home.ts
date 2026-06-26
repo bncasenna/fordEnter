@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, RouterModule],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrls: ['./home.css']
 })
-export class Home {
+export class HomeComponent {
 
+  constructor(private router: Router) {}
+
+  efetuarLogout(): void {
+    this.router.navigate(['/login']);
+  }
 }

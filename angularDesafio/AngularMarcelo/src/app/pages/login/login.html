@@ -1,1 +1,40 @@
-<p>login works!</p>
+<main>
+  <div class="backgorund">
+    <img src ="img/ranger.svg" alt="ranger">
+  </div>
+
+  <div class="loginBox">
+    <div class="loginHeader">
+        <img src="img/ford.svg" alt="Ford Logo" class="logo">
+      </div>
+
+      <h2>Boas-vindas</h2>
+
+      <form (ngSubmit)="efetuarLogin()">
+        
+        <div class="user">
+          <input 
+            type="text" 
+            name="usuario" 
+            placeholder="Insira seu usuário" 
+            [(ngModel)]="usuarioInput" 
+            required>
+        </div>
+
+        <div class="pass">
+          <input 
+            type="password" 
+            name="senha" 
+            placeholder="Insira sua senha" 
+            [(ngModel)]="senhaInput" 
+            required>
+        </div>
+
+        <div *ngIf="erroMensagem" class="error-alert">
+          {{ erroMensagem }}
+        </div>
+
+        <button type="submit" class="btnSubmit">Entrar</button>
+      </form>
+  </div>
+</main>
