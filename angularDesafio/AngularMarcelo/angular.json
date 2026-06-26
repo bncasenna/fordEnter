@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "AngularMarcelo": {
+    "angularMarcelo": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "AngularMarcelo:build:production"
+              "buildTarget": "angularMarcelo:build:production"
             },
             "development": {
-              "buildTarget": "AngularMarcelo:build:development"
+              "buildTarget": "angularMarcelo:build:development"
             }
           },
           "defaultConfiguration": "development"
