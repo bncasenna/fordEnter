@@ -11,9 +11,14 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class HomeComponent {
 
+  menuAberto: boolean = false;
+  
   constructor(private router: Router) {}
-
   efetuarLogout(): void {
     this.router.navigate(['/login']);
   }
+  alternarMenu(): void{
+    this.menuAberto = !this.menuAberto;
+  }
+
 }

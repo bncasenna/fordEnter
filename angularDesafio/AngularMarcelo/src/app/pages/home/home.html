@@ -1,12 +1,23 @@
 <div class="homeWrapper">
   
-  <header class="homeHeader">
+  <header class="homeHeader" [ngClass]="{ 'recolhido': menuAberto }">
 
     <div class="headerLogo">
       <img src="img/ford.svg" alt="Ford Logo">
     </div>
 
-    <button (click)="efetuarLogout()" class="btnLogout">Sair</button>
+    <button class="hamburgerMenu" (click)="alternarMenu()" 
+    [ngClass]="{ 'active': menuAberto }">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="navLinks">
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+      <a routerLink="/dashboard">Dashboard</a>
+      <button (click)="efetuarLogout()" class="btnLogout">Sair</button>
+    </nav>
   </header>
 
   <main class="homeMain">

@@ -1,12 +1,19 @@
-main{
+/* ==========================================================================
+   CONTAINER e ESTRUTURA DO LOGIN
+   ========================================================================== */
+main {
     display: flex;
     width: 100vw;
     height: 100vh;
     margin: 0;
     overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
 
+
+/* ==========================================================================
+   SEÇÃO DE PLANO DE FUNDO 
+   ========================================================================== */
 .backgorund {
     flex: 1;
     display: flex;
@@ -21,7 +28,11 @@ main{
     object-fit: contain;
 }
 
-.loginBox{
+
+/* ==========================================================================
+   LOGIN 
+   ========================================================================== */
+.loginBox {
     width: 450px; 
     background-color: #F2F2F2;
     display: flex;
@@ -33,18 +44,18 @@ main{
     margin-right: 30px;
 }
 
-.loginHeader{
+.loginHeader {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
 }
 
-.logo{
+.logo {
     width: 180px;
     height: auto;
 }
 
-h2{
+h2 {
     color: #400707;
     font-size: 1.4rem;
     font-weight: bold;
@@ -52,6 +63,10 @@ h2{
     text-align: center;
 }
 
+
+/* ==========================================================================
+   ESTRUTURA DO FORMULÁRIO e INPUTS 
+   ========================================================================== */
 form {
     width: 100%;
     max-width: 300px; 
@@ -74,7 +89,7 @@ form {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-
+/* Estado de Foco nos Inputs */
 .user input:focus, 
 .pass input:focus {
     border-color: #024059;
@@ -82,6 +97,9 @@ form {
 }
 
 
+/* ==========================================================================
+   MENSAGEM DE ALERTA e BOTÃO
+   ========================================================================== */
 .error-alert {
     color: #A61B0F;
     font-size: 0.85rem;
@@ -105,6 +123,7 @@ form {
     margin-top: 10px;
 }
 
+/* Interações do Botão de Envio */
 .btnSubmit:hover {
     background-color: #400707; 
     transform: scale(1.02); 
