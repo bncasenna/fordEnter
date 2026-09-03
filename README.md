@@ -1,20 +1,37 @@
 # 🚗 Desafios Ford Enter
 
-Este repositório foi criado para armazenar e organizar todas as soluções dos desafios propostos durante o programa **Ford Enter**. O objetivo é documentar minha evolução técnica e organizar os projetos desenvolvidos.
+Este repositório foi criado para armazenar, organizar e documentar a minha evolução prática e teórica durante o programa **Ford Enter**.
+
+Actualmente, a branch principal (`main`) é dedicada à **Trilha de Back-End** do programa[cite: 2].
 
 ---
 
 ## 📌 Sobre o Programa
-O **Ford Enter** é uma iniciativa focada em capacitação tecnológica, preparando novos talentos para o mercado de desenvolvimento de software através de desafios práticos e teóricos.
 
-## 📂 Estrutura do Repositório
+O **Ford Enter** é uma iniciativa focada em capacitação tecnológica, preparando novos talentos para o mercado de desenvolvimento de software. 
 
-Cada pasta contém a solução de um desafio solicitado por cada sprint do projeto.
+A formação abrange desde o desenvolvimento de interfaces no Front-end até a lógica de negócios e arquitetura de sistemas no Back-end.
 
-## 🛠️ Tecnologias Utilizadas
-Neste programa, estou utilizando:
-* **Linguagens:** HTML, CSS, JavaScript, Angular, TypeScript
-* **Ferramentas:** Git, GitHub, VS Code
+---
+
+## 📂 Estrutura do Repositório & Branches
+
+Para manter a organização do código à medida que avançamos nas tecnologias, o repositório é dividido por fases do aprendizado:
+
+* 🟢 **`main` (Branch Atual):** Focada na **Trilha Back-End**, contendo os desafios desenvolvidos em **C#** e ecossistema **.NET**.
+* 🔵 ** `frontEnd`:** Armazena todos os projetos desenvolvidos durante a fase de **Front-End** (HTML, CSS, JavaScript, TypeScript e Angular).
+
+---
+
+## 🛠️ Tecnologias e Ferramentas
+
+### Back-End (Atualmente na branch `main`)
+* **Linguagens & Frameworks:** C#, .NET, SQL/MySQL]
+* **Ferramentas:** Visual Studio, Git, GitHub
+
+### Front-End (Disponível na branch `frontEnd`)
+* **Linguagens & Frameworks:** HTML5, CSS3, JavaScript, TypeScript, Angular
+* **Ferramentas:** VS Code, Git, GitHub
 
 ---
 
