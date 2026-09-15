@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FordCoin - Dashboard</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+<body class="home-body">
+
+    <header class="home-header">
+        <h2>Olá, <span id="nomeUsuario" class="user-name">Cliente</span>!</h2>
+        <button class="btn-logout" onclick="logout()">SAIR</button>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="balance-card">
+            <h3 class="card-title">Saldo Disponível</h3>
+            <h1 class="balance-amount">R$ 1.500,00</h1>
+            <p class="account-info">Conta Corrente: 1001-9</p>
+        </div>
+    </main>
+
+    <script>
+        const nome = localStorage.getItem('usuarioNome');
+        if (nome) {
+            document.getElementById('nomeUsuario').innerText = nome;
+        }
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = './index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url('./style.css'); 
+
+body.home-body {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--darkBlue);
+}
+
+/* Cabeçalho / Navbar */
+.home-header {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    margin-bottom: 40px;
+}
+
+.home-header h2 {
+    color: var(--white);
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.home-header .user-name {
+    color: var(--golden);
+    font-weight: 700;
+}
+
+.btn-logout {
+    padding: 10px 20px;
+    background: transparent;
+    color: var(--golden);
+    border: 1.5px solid var(--golden);
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: var(--golden);
+    color: var(--darkBlue);
+    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+}
+
+.balance-card {
+    background: var(--lighter);
+    padding: 35px 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-top: 5px solid var(--golden);
+}
+
+.balance-card .card-title {
+    color: var(--darkBlue);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+.balance-card .balance-amount {
+    color: var(--darkBlue);
+    font-size: 36px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.balance-card .account-info {
+    color: #666666;
+    font-size: 13px;
+    margin-top: 15px;
+    font-weight: 500;
+}
